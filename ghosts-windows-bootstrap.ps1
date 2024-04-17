@@ -24,7 +24,9 @@ $dotNetFrameworkUrl = "http://go.microsoft.com/fwlink/?linkid=825302"
  
 $exerciseZipUrl = "https://cmu.box.com/shared/static/kqo5cl7f5f2v22xgud6o2fd26xrrwtpq.zip" 
  
- 
+
+# Set SSL/TLS options in case the server is old as shit or unpatched
+[Net.ServicePointManager]::SecurityProtocol = "tls12, tls11, tls"
  
 # Set installation paths 
  
